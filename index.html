@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O Ensino de Robótica Através do Uso de Realidade Aumentada no Novo Ensino Médio</title>
-    <link rel="stylesheet" href="style/style.css">
-    <script src="javascript/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+        }
+        header {
+            background-color: #FFBD59;
+            padding: 20px 0;
+            text-align: center;
+            color: #000000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+        h1 {
+            font-size: 20px;
+            text-align: center;
+        }
+        main {
+            background-image: url('img/robo.png'); 
+            background-size: cover; 
+            background-position: center; 
+            height: calc(100vh - 40px); 
+            overflow: hidden; 
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            color: #fff; 
+        }
+        .content {
+            text-align: left;
+            padding-top: 150px;
+            color: #FFBD59;
+            border-radius: 10px;
+            width: 50%;
+            margin: 0 100px auto;
+        }
+        .content p
+        {
+            color: #000000;
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            color: #000000;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed; 
+            width: 100%; 
+            bottom: 0; 
+            left: 0; 
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,12 +80,21 @@
     <main>
         <div class="content">
             <h2>ARdroid Edu</h2>
-            <p>Este projeto tem como objetivo principal fornecer uma experiência educacional interativa através da realidade aumentada. Estima-se que o aplicativo possa auxiliar o processo de ensinno-aprendizagem nas disciplinas que abordam a robótica como apoio no Ensino Médio</p>
+            <p>Este trabalho tem como propósito elaborar um aplicativo que emprega a realidade aumentada para auxiliar na aplicação do Novo Ensino Médio no Brasil, especialmente no Estado do Tocantins. Com a introdução das eletivas, muitos professores enfrentam desafios ao ensinar conceitos técnicos, o que pode prejudicar o desenvolvimento das competências e/ou habilidades dos estudantes.</p>
             <button id="downloadBtn">Baixar QR Code</button>
         </div>
     </main>
     <footer>
         &copy; Instituto Federal do Tocantins
     </footer>
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        downloadBtn.addEventListener('click', () => {
+            const pdfLink = document.createElement('a');
+            pdfLink.href = '/ARdroid_Edu.pdf';
+            pdfLink.download = 'ARdroid_Edu.pdf';
+            pdfLink.click();
+        });
+    </script>
 </body>
 </html>
