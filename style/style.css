@@ -53,6 +53,13 @@ button {
 button:hover {
     background-color: #45a049;
 }
+.tutorialButton {
+    background-color: #AEC6CF;
+    
+}
+.tutorialButton:hover {
+    background-color: #94A8B0;
+}
 footer {
     color: #000000;
     text-align: center;
