@@ -116,32 +116,42 @@
     <header>
         <h1>O Ensino de Robótica Através do Uso de Realidade Aumentada no Novo Ensino Médio</h1>
     </header>
-    <main>
-        <div class="content">
-            <h2>ARdroid Edu</h2>
-            <p>Este trabalho tem como propósito elaborar um aplicativo que emprega a realidade aumentada para auxiliar na aplicação de conceitos que envolvem a robótica, presentes atualmente no currículo escolar do Novo Ensino Médio, especialmente no Estado do Tocantins. Com a introdução das eletivas, muitos professores enfrentam desafios ao ensinar conceitos técnicos, o que pode prejudicar o desenvolvimento das competências e/ou habilidades dos estudantes.</p>
-            <button id="downloadBtn">Baixar QR Code</button>
-            <button id="downloadTutorial" class="tutorialButton">Baixar Tutorial do Robô</button>
-        </div>
-    </main>
-    <footer>
-        &copy; Instituto Federal do Tocantins
-    </footer>
-    <script>
-        const downloadBtn = document.getElementById('downloadBtn');
-        downloadBtn.addEventListener('click', () => {
-            const pdfLink = document.createElement('a');
-            pdfLink.href = 'ARdroid_Edu.pdf';
-            pdfLink.download = 'ARdroid_Edu.pdf';
-            pdfLink.click();
-        });
-         const downloadBtnTutorial = document.getElementById('downloadTutorial');
-        downloadBtnTutorial.addEventListener('click', () => {
-            const pdfTutorial = document.createElement('a');
-            pdfTutorial.href = 'tutorialRobo.pdf';
-            pdfTutorial.download = 'tutorialRobo.pdf';
-            pdfTutorial.click();
-        });
-    </script>
+   <main>
+    <div class="content">
+        <h2>ARdroid Edu</h2>
+        <p>Este trabalho tem como propósito elaborar um aplicativo que emprega a realidade aumentada para auxiliar na aplicação de conceitos que envolvem a robótica, presentes atualmente no currículo escolar do Novo Ensino Médio, especialmente no Estado do Tocantins. Com a introdução das eletivas, muitos professores enfrentam desafios ao ensinar conceitos técnicos, o que pode prejudicar o desenvolvimento das competências e/ou habilidades dos estudantes.</p>
+        <button id="downloadBtn">Baixar QR Code</button>
+        <button id="downloadTutorial" class="tutorialButton">Baixar Tutorial do Robô</button>
+        <button id="downloadScript" class="downloadScript">Baixar Código</button>
+    </div>
+</main>
+<footer>
+    &copy; Instituto Federal do Tocantins
+</footer>
+<script>
+    const downloadBtn = document.getElementById('downloadBtn');
+    downloadBtn.addEventListener('click', () => {
+        const pdfLink = document.createElement('a');
+        pdfLink.href = 'ARdroid_Edu.pdf';
+        pdfLink.download = 'ARdroid_Edu.pdf';
+        pdfLink.click();
+    });
+
+    const downloadBtnTutorial = document.getElementById('downloadTutorial');
+    downloadBtnTutorial.addEventListener('click', () => {
+        const pdfTutorial = document.createElement('a');
+        pdfTutorial.href = 'tutorialRobo.pdf';
+        pdfTutorial.download = 'tutorialRobo.pdf';
+        pdfTutorial.click();
+    });
+
+    const downloadScript = document.getElementById('downloadScript');
+    downloadScript.addEventListener('click', () => {
+        const pdfManual = document.createElement('a');
+        pdfManual.href = 'script.c';
+        pdfManual.download = 'script.c';
+        pdfManual.click();
+    });
+</script>
 </body>
 </html>
